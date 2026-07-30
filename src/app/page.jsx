@@ -4,7 +4,109 @@ import React, { useState } from 'react';
 import { Menu, X, Phone, MapPin, Zap } from 'lucide-react';
 
 export default function KAMODesign() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);'use client';
+
+import React, { useState } from 'react';
+
+export default function KAMODesign() {
+  const handleWhatsApp = () => {
+    window.open(`https://wa.me/40725834386?text=Bună! Mă interesează serviciile de mobilier la comandă.`, '_blank');
+  };
+
+  return (
+    <>
+      {/* Navigation */}
+      <nav>
+        <div className="container">
+          <div className="logo-section">
+            <div className="logo-icon">KA-MO</div>
+            <div className="logo-text">KA-MO DESIGN</div>
+          </div>
+          <button className="btn-whatsapp" onClick={handleWhatsApp}>
+            📱 WhatsApp
+          </button>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="hero">
+        <div className="container">
+          <h1>KA-MO DESIGN</h1>
+          <h2>Mobilier la Comandă, Personalizat</h2>
+          <p>
+            Designul tău, calitatea noastră, preț corect. Consiliere, proiectare și montaj complet pentru fiecare proiect.
+          </p>
+          <button className="btn-primary" onClick={handleWhatsApp}>
+            Contactează-ne pe WhatsApp
+          </button>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="services">
+        <div className="container">
+          <h2 className="section-title">Ce Oferim</h2>
+          <div className="services-grid">
+            <div className="service-card">
+              <h3>💡 Consiliere & Proiectare</h3>
+              <p>
+                Analizam spațiul tău și realizam design personalizat care se potrivește perfect nevoilor și stilului dumneavoastra.
+              </p>
+            </div>
+
+            <div className="service-card">
+              <h3>🔨 Construcție Profesională</h3>
+              <p>
+                Fabricare calitativă cu material care durează. Fiecare piesă e realizată cu atenție la detalii.
+              </p>
+            </div>
+
+            <div className="service-card">
+              <h3>📦 Montaj la Domiciliu</h3>
+              <p>
+                Instalare profesională și finisare impecabilă. Livrare și montaj în București și Ilfov.
+              </p>
+            </div>
+
+            <div className="service-card">
+              <h3>⚡ Urgență Disponibilă</h3>
+              <p>
+                Lucram si în regim de urgenta, in functie de complexitatea proiectului. Contacteaza-ne pentru detalii.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Coverage Area */}
+      <section className="coverage">
+        <h3>🗺️ Zone de Lucru</h3>
+        <p>București și Ilfov</p>
+      </section>
+
+      {/* Contact Section */}
+      <section className="contact">
+        <div className="container">
+          <h2 className="section-title">Contact</h2>
+          <div className="contact-card">
+            <div className="contact-phone">📱 0725 834 386</div>
+            <p className="contact-desc">
+              Disponibil pe WhatsApp și telefon pentru consultații, proiectare sau ofertă.
+            </p>
+            <button className="btn-whatsapp-large" onClick={handleWhatsApp}>
+              💬 Scrie-ne pe WhatsApp
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer>
+        <p>&copy; 2026 KA-MO DESIGN. Mobilier Personalizat. Toate drepturile rezervate.</p>
+      </footer>
+    </>
+  );
+}
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const portfolioImages = [
